@@ -17,7 +17,9 @@ export function TRPCReactQueryProvider({
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "http://localhost:3000/api/trpc",
+          url: process.env.VERCEL_URL
+            ? "http://" + process.env.VERCEL_URL + "/api/trpc"
+            : "http://localhost:3000/api/trpc",
         }),
       ],
       transformer: superjson,
