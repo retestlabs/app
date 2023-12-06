@@ -14,13 +14,13 @@ export const SampleSizeInput = () => {
   let [absoluteSize, setAbsoluteSize] = React.useState(1000);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       <div className="flex items-center justify-between">
         <Label
           htmlFor={
             typeOfSampleSize === "relative"
-              ? "experiment-sample-relative-size"
-              : "experiment-sample-absolute-size"
+              ? "experiment-sampleSizeRelative"
+              : "experiment-sampleSizeAbsolute"
           }
         >
           Sample size
@@ -48,29 +48,28 @@ export const SampleSizeInput = () => {
       {typeOfSampleSize === "relative" ? (
         <div className="flex space-x-4">
           <Slider
-            id="experiment-sample-relative-size"
-            name="experiment-sample-relative-size"
             value={relativeSize}
             onValueChange={setRelativeSize}
             min={0}
-            max={1}
-            step={0.005}
+            max={100}
+            step={0.05}
           />
           <Input
-            id="experiment-sample-relative-size-input"
-            className="w-20 tabular-nums"
-            value={(relativeSize[0] * 100).toFixed(1)}
-            onChange={(e) => setRelativeSize([Number(e.target.value) / 100])}
+            id="experiment-sampleSizeRelative"
+            name="experiment-sampleSizeRelative"
+            className="w-24 tabular-nums"
+            value={relativeSize[0].toFixed(2)}
+            onChange={(e) => setRelativeSize([Number(e.target.value)])}
             type="number"
             min={0}
             max={100}
-            step={0.5}
+            step={0.05}
           ></Input>
         </div>
       ) : (
         <Input
-          id="experiment-sample-absolute-size"
-          name="experiment-sample-absolute-size"
+          id="experiment-sampleSizeAbsolute"
+          name="experiment-sampleSizeAbsolute"
           className="w-32 tabular-nums"
           value={absoluteSize}
           onChange={(e) => setAbsoluteSize(Number(e.target.value))}
@@ -83,7 +82,7 @@ export const SampleSizeInput = () => {
       <p className="text-xs text-muted-foreground tabular-nums">
         Sample size{": "}
         {typeOfSampleSize === "relative"
-          ? `${(relativeSize[0] * 100).toFixed(1)}% of users`
+          ? `${relativeSize[0].toFixed(2)}% of users`
           : `${absoluteSize} users`}
       </p>
     </div>

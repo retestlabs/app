@@ -15,7 +15,7 @@ export const DurationInput = () => {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <Label htmlFor="experiment-duration">Duration</Label>
+        <Label>Duration</Label>
         <InputHint>
           How long do you want to run the experiment? We recommend at least 2
           weeks to account for weekly fluctuations.
@@ -51,6 +51,10 @@ export const DurationInput = () => {
             )} days`
           : "Choose a start and end date"}
       </p>
+      <div className="hidden">
+        <input value={startedAt?.toISOString()} name="experiment-startedAt" />
+        <input value={endedAt?.toISOString()} name="experiment-endedAt" />
+      </div>
     </div>
   );
 };
