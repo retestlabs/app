@@ -18,6 +18,8 @@ const Page = () => {
     },
   });
 
+  console.log(createExperiment.isLoading);
+
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-lg">Create new experiment</h1>
@@ -82,7 +84,7 @@ const Page = () => {
         <DurationInput />
         <SampleSizeInput />
         <div className="flex justify-end">
-          <Button type="submit" disabled={createExperiment.isPending}>
+          <Button type="submit" disabled={createExperiment.isLoading}>
             Create experiment
           </Button>
         </div>
