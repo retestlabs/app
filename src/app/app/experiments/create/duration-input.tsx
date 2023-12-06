@@ -44,15 +44,11 @@ export const DurationInput = () => {
         </div>
       </div>
 
-      <p className="text-xs text-muted-foreground">
+      <p className="text-xs text-muted-foreground tabular-nums">
         {endedAt && startedAt
-          ? // starts and ends at 00:00:00 and ends at 23:59:59
-            `From ${format(startedAt, "Pp")} to ${format(
-              endedAt,
-              "Pp"
-            )} (${Math.round(
+          ? `${Math.round(
               (endedAt.getTime() - startedAt.getTime()) / (1000 * 60 * 60 * 24)
-            )} days)`
+            )} days`
           : "Choose a start and end date"}
       </p>
     </div>

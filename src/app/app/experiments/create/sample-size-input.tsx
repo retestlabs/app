@@ -58,7 +58,7 @@ export const SampleSizeInput = () => {
           />
           <Input
             id="experiment-sample-relative-size-input"
-            className="w-20"
+            className="w-20 tabular-nums"
             value={(relativeSize[0] * 100).toFixed(1)}
             onChange={(e) => setRelativeSize([Number(e.target.value) / 100])}
             type="number"
@@ -71,7 +71,7 @@ export const SampleSizeInput = () => {
         <Input
           id="experiment-sample-absolute-size"
           name="experiment-sample-absolute-size"
-          className="w-32"
+          className="w-32 tabular-nums"
           value={absoluteSize}
           onChange={(e) => setAbsoluteSize(Number(e.target.value))}
           type="number"
@@ -80,7 +80,7 @@ export const SampleSizeInput = () => {
         ></Input>
       )}
 
-      <p className="text-xs text-muted-foreground">
+      <p className="text-xs text-muted-foreground tabular-nums">
         Sample size{": "}
         {typeOfSampleSize === "relative"
           ? `${(relativeSize[0] * 100).toFixed(1)}% of users`
