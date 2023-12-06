@@ -1,0 +1,16 @@
+{
+  "id": "mig_clnkq2qmg89bhu3d0j70",
+  "parentID": "mig_clnkpv0rqcljm4d1nlp0",
+  "checksum": "1:6ab98b889cbb3a95dfdf2b73966620d71cab292a689d7b1a7fe7f6f80e73f324",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "sampleSizeAbsolute",
+          "type": "int"
+        },
+        "table": "experiments"
+      }
+    }
+  ]
+}

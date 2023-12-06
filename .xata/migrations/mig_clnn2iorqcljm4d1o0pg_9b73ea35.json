@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnn2iorqcljm4d1o0pg",
+  "parentID": "mig_clnn2b0rqcljm4d1o0og",
+  "checksum": "1:9b73ea357fe8d2dbb17fab99e4a3d94ed974603b10c2ad18e2edfca17fa31602",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "latitude",
+        "table": "subjects"
+      }
+    }
+  ]
+}

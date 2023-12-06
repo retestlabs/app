@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnkpagrqcljm4d1nli0",
+  "parentID": "mig_clnkp8grqcljm4d1nlh0",
+  "checksum": "1:6bb469d2e511ea09e3a15e9621e218cbcd0e3b9f29d2f0fae95e21c96bf864cb",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "time_zones",
+        "oldName": "timeZone"
+      }
+    }
+  ]
+}

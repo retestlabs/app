@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnmsq2mg89bhu3d12g0",
+  "parentID": "mig_clnmshb93cu4enldlvvg",
+  "checksum": "1:ff79cb68d229eb4d07928b8132e35f4d90f85f50faea2f1ddbb32d69c6d27c5f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "subject",
+          "type": "link",
+          "link": {
+            "table": "subjects"
+          }
+        },
+        "table": "devices"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_clnkscgrqcljm4d1nlu0",
+  "parentID": "mig_clnkr52mg89bhu3d0jbg",
+  "checksum": "1:de9384678bf40d5592e019f774907469977903475779ceaa1b622472d8d9f502",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "startedAt",
+          "type": "datetime"
+        },
+        "table": "experiments"
+      }
+    }
+  ]
+}

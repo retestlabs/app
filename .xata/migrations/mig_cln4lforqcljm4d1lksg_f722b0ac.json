@@ -1,0 +1,18 @@
+{
+  "id": "mig_cln4lforqcljm4d1lksg",
+  "parentID": "mig_cln4ldgrqcljm4d1lkrg",
+  "checksum": "1:f722b0ac4937fc2a96923b691c67b6eae445e8174a6bc870a158755b0a456d33",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "cities"
+      }
+    }
+  ]
+}

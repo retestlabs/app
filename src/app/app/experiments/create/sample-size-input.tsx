@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export const SampleSizeInput = () => {
   let [typeOfSampleSize, setTypeOfSampleSize] = React.useState("relative");
-  let [relativeSize, setRelativeSize] = React.useState([0.25]);
+  let [relativeSize, setRelativeSize] = React.useState([5]);
   let [absoluteSize, setAbsoluteSize] = React.useState(1000);
 
   return (
@@ -27,7 +27,7 @@ export const SampleSizeInput = () => {
         </Label>
         <InputHint>
           How many users do you want to include in the experiment? We recommend
-          at least 1000 users per variant.
+          at least 1000.
         </InputHint>
       </div>
       <RadioGroup value={typeOfSampleSize} onValueChange={setTypeOfSampleSize}>

@@ -18,7 +18,7 @@ import { Label } from "@/components/ui/label";
 interface DateTimePickerProps {
   date: Date | undefined;
   setDate: any;
-  id?: string;
+  id: string | undefined;
 }
 
 export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
@@ -26,32 +26,41 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
   const hourRef = React.useRef<HTMLInputElement>(null);
   const secondRef = React.useRef<HTMLInputElement>(null);
 
+  let [dt, setDt] = React.useState<Date | undefined>();
+  React.useEffect(() => {
+    setDt(date);
+  }, []);
+
+  React.useEffect(() => {
+    setDate(dt);
+  }, [dt, setDate]);
+
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           id={id}
-          variant={"outline"}
+          variant="outline"
           className={cn(
             "w-[280px] justify-start text-left font-normal tabular-nums",
-            !date && "text-muted-foreground"
+            !dt && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP HH:mm:ss") : <span>Pick a date</span>}
+          {dt ? format(dt, "PPP HH:mm:ss") : <span>Pick a dt</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
         <Calendar
           mode="single"
-          selected={date}
+          selected={dt}
           onSelect={(selectedDate) => {
-            if (selectedDate && date) {
-              selectedDate.setHours(date.getHours());
-              selectedDate.setMinutes(date.getMinutes());
-              selectedDate.setSeconds(date.getSeconds());
+            if (selectedDate && dt) {
+              selectedDate.setHours(dt.getHours());
+              selectedDate.setMinutes(dt.getMinutes());
+              selectedDate.setSeconds(dt.getSeconds());
             }
-            setDate(selectedDate);
+            setDt(selectedDate);
           }}
         />
         <div className="border-t border-border flex justify-between">
@@ -62,8 +71,8 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
               </Label>
               <TimePickerInput
                 picker="hours"
-                date={date}
-                setDate={setDate}
+                date={dt}
+                setDate={setDt}
                 ref={hourRef}
                 onRightFocus={() => minuteRef.current?.focus()}
               />
@@ -74,8 +83,8 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
               </Label>
               <TimePickerInput
                 picker="minutes"
-                date={date}
-                setDate={setDate}
+                date={dt}
+                setDate={setDt}
                 ref={minuteRef}
                 onLeftFocus={() => hourRef.current?.focus()}
                 onRightFocus={() => secondRef.current?.focus()}
@@ -87,8 +96,8 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
               </Label>
               <TimePickerInput
                 picker="seconds"
-                date={date}
-                setDate={setDate}
+                date={dt}
+                setDate={setDt}
                 ref={secondRef}
                 onLeftFocus={() => minuteRef.current?.focus()}
               />
@@ -104,12 +113,12 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
                 variant="outline"
                 onClick={() => {
                   let now = new Date();
-                  if (date) {
-                    now.setFullYear(date.getFullYear());
-                    now.setMonth(date.getMonth());
-                    now.setDate(date.getDate());
+                  if (dt) {
+                    now.setFullYear(dt.getFullYear());
+                    now.setMonth(dt.getMonth());
+                    now.setDate(dt.getDate());
                   }
-                  setDate(now);
+                  setDt(now);
                 }}
                 className="w-8 h-8"
               >
@@ -125,12 +134,12 @@ export function DateTimePicker({ date, setDate, id }: DateTimePickerProps) {
                 variant="outline"
                 onClick={() => {
                   let now = new Date();
-                  if (date) {
-                    now.setHours(date.getHours());
-                    now.setMinutes(date.getMinutes());
-                    now.setSeconds(date.getSeconds());
+                  if (dt) {
+                    now.setHours(dt.getHours());
+                    now.setMinutes(dt.getMinutes());
+                    now.setSeconds(dt.getSeconds());
                   }
-                  setDate(now);
+                  setDt(now);
                 }}
                 className="w-8 h-8"
               >

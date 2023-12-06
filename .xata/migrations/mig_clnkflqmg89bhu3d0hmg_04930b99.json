@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnkflqmg89bhu3d0hmg",
+  "parentID": "mig_clnkfj0rqcljm4d1njtg",
+  "checksum": "1:04930b99e72f4f795eae9fc2e29f9bb51e1da2d3693f1f574f75875358453693",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experiment",
+          "type": "link",
+          "link": {
+            "table": "experiments"
+          }
+        },
+        "table": "experiment_country_relations"
+      }
+    }
+  ]
+}

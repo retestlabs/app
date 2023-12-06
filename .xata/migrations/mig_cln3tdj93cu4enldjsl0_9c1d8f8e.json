@@ -1,0 +1,14 @@
+{
+  "id": "mig_cln3tdj93cu4enldjsl0",
+  "parentID": "mig_cln3tc8rqcljm4d1ljlg",
+  "checksum": "1:9c1d8f8e0b3179f2863b28bbb56eb31be8f1744f88f628af5e84fb0943a081e0",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "sampleSizeAbsolute",
+        "oldName": "sampleSize",
+        "table": "experiments"
+      }
+    }
+  ]
+}

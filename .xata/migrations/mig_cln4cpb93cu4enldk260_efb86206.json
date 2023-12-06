@@ -1,0 +1,16 @@
+{
+  "id": "mig_cln4cpb93cu4enldk260",
+  "parentID": "mig_cln4cbb93cu4enldk250",
+  "checksum": "1:efb8620608af96d3c774f9154250646fe0f804c32e4e2a1f682aa0159dc09c82",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "description",
+          "type": "text"
+        },
+        "table": "variants"
+      }
+    }
+  ]
+}

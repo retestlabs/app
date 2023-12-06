@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnn1s0rqcljm4d1o0kg",
+  "parentID": "mig_clnn1aj93cu4enldm080",
+  "checksum": "1:da272317e41e270f73596acc65b3d7ce91e65cac635a24b92beb527bc39c7182",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "experiment_timezone_relations"
+      }
+    }
+  ]
+}

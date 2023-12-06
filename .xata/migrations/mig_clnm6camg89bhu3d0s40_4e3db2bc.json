@@ -1,0 +1,18 @@
+{
+  "id": "mig_clnm6camg89bhu3d0s40",
+  "parentID": "mig_clnm69grqcljm4d1nsk0",
+  "checksum": "1:4e3db2bc501b8c5404d2b9ea0903ae427024104d76696b337fe2f7b300f51cd0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "operating_systems"
+      }
+    }
+  ]
+}

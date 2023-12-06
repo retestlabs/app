@@ -1,0 +1,12 @@
+{
+  "id": "mig_cln4l8j93cu4enldk420",
+  "parentID": "mig_cln4l70rqcljm4d1lkqg",
+  "checksum": "1:d02663645c4edbc77461e0392954426eb0a48f71a9002151b5a981b649f53378",
+  "operations": [
+    {
+      "addTable": {
+        "table": "city"
+      }
+    }
+  ]
+}

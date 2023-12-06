@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnn5aorqcljm4d1o0u0",
+  "parentID": "mig_clnn55orqcljm4d1o0t0",
+  "checksum": "1:ffb41a88ad4685ae665aff7fe340345fdab7d59e347e962984d0448edf539921",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "variant",
+          "type": "link",
+          "link": {
+            "table": "variants"
+          }
+        },
+        "table": "logs"
+      }
+    }
+  ]
+}

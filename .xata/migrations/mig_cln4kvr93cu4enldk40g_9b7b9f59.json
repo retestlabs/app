@@ -1,0 +1,13 @@
+{
+  "id": "mig_cln4kvr93cu4enldk40g",
+  "parentID": "mig_cln4ktb93cu4enldk3vg",
+  "checksum": "1:9b7b9f5988496272dd4e4b5d681b5e5c61d0c5aad21ccc45177db3c18b0535b1",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "countries",
+        "oldName": "country"
+      }
+    }
+  ]
+}

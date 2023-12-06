@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnkr02mg89bhu3d0j9g",
+  "parentID": "mig_clnkqt0rqcljm4d1nlt0",
+  "checksum": "1:8c3ff070ed02c93c412e1b06b0f4e44bac6e500e2ee04a50ced75c06bd84135b",
+  "operations": [
+    {
+      "addTable": {
+        "table": "experiment_timezone_relations"
+      }
+    }
+  ]
+}

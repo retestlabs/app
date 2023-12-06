@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnm6sqmg89bhu3d0sv0",
+  "parentID": "mig_clnm6camg89bhu3d0s40",
+  "checksum": "1:b7a27c7964cd5556edbad609855e42d727646afedc3f61bac1d8639fb23e8e96",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "operatingSystem",
+          "type": "link",
+          "link": {
+            "table": "operating_systems"
+          }
+        },
+        "table": "subjects"
+      }
+    }
+  ]
+}

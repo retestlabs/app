@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnkr2qmg89bhu3d0jag",
+  "parentID": "mig_clnkr02mg89bhu3d0j9g",
+  "checksum": "1:1571a8a2668c22706632f8cb435ad043c36d2ac737d9b1bcfe0438614b0d270a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experiment",
+          "type": "link",
+          "link": {
+            "table": "experiments"
+          }
+        },
+        "table": "experiment_timezone_relations"
+      }
+    }
+  ]
+}

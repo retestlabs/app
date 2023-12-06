@@ -1,0 +1,13 @@
+{
+  "id": "mig_cln4l1orqcljm4d1lkpg",
+  "parentID": "mig_cln4l0grqcljm4d1lkog",
+  "checksum": "1:1431185a44c6cb4ee01f5d76b3f8dbff4c76617c74c07d6278639228925820f4",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "regions",
+        "oldName": "region"
+      }
+    }
+  ]
+}

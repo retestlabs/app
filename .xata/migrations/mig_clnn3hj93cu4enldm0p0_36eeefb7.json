@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnn3hj93cu4enldm0p0",
+  "parentID": "mig_clnn3f0rqcljm4d1o0r0",
+  "checksum": "1:36eeefb737120054b34150b476ecafc8ad716a47133693b83be5d5ccedca7de8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "subject",
+          "type": "link",
+          "link": {
+            "table": "subjects"
+          }
+        },
+        "table": "subject_variant_relations"
+      }
+    }
+  ]
+}

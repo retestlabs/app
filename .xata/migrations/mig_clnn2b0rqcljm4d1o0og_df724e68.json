@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnn2b0rqcljm4d1o0og",
+  "parentID": "mig_clnn288rqcljm4d1o0ng",
+  "checksum": "1:df724e68d213a4b5c3f3931326ac3b2933d034900dd3b36520a815d34b17b6ac",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "variant",
+        "table": "logs"
+      }
+    }
+  ]
+}

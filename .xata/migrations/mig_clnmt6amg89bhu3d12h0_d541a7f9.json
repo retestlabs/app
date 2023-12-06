@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnmt6amg89bhu3d12h0",
+  "parentID": "mig_clnmt3grqcljm4d1nvkg",
+  "checksum": "1:d541a7f9cf77ea56dc1bd6143501b59825c5420490673968544f0c677f20e44d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "operatingSystem",
+          "type": "link",
+          "link": {
+            "table": "operating_systems"
+          }
+        },
+        "table": "devices"
+      }
+    }
+  ]
+}

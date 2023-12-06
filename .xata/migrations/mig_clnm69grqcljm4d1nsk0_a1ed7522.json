@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnm69grqcljm4d1nsk0",
+  "parentID": "mig_clnm65amg89bhu3d0s30",
+  "checksum": "1:a1ed7522f08b18536f04512c69a593281222860f9662090b5d4dbbd31593ab16",
+  "operations": [
+    {
+      "addTable": {
+        "table": "operating_systems"
+      }
+    }
+  ]
+}

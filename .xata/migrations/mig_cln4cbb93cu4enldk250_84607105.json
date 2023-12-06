@@ -1,0 +1,18 @@
+{
+  "id": "mig_cln4cbb93cu4enldk250",
+  "parentID": "mig_cln3tdj93cu4enldjsl0",
+  "checksum": "1:84607105b8558e9dd59d9f6dc2ab682225cf35c20cac70537f175cdbd1ccee98",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "variants"
+      }
+    }
+  ]
+}

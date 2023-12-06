@@ -1,0 +1,17 @@
+{
+  "id": "mig_cln4jer93cu4enldk3rg",
+  "parentID": "mig_cln4g8b93cu4enldk28g",
+  "checksum": "1:958876f1747bb8a2a86937614913d39a6d7c1bc22c7999713aa74ab2f92cd397",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "hashedIpAddress",
+          "type": "string",
+          "unique": true
+        },
+        "table": "subject"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnn0nimg89bhu3d12p0",
+  "parentID": "mig_clnmt6amg89bhu3d12h0",
+  "checksum": "1:19bc5e77934415054f6a9a1dd00974c397199bcc58d29bfd42aec937564f43b1",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "city",
+        "table": "subjects"
+      }
+    }
+  ]
+}

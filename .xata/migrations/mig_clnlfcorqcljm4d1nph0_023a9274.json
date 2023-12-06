@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnlfcorqcljm4d1nph0",
+  "parentID": "mig_clnlf8orqcljm4d1npg0",
+  "checksum": "1:023a927482fb1d98cddbc0e64f08ccba08e674dfa8a100f50e90df60f317606c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "subject",
+          "type": "link",
+          "link": {
+            "table": "subjects"
+          }
+        },
+        "table": "logs"
+      }
+    }
+  ]
+}

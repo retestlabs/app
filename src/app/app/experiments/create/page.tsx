@@ -1,24 +1,54 @@
+"use client";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
 import { InputHint } from "@/components/input-hint";
 
 import { SampleSizeInput } from "./sample-size-input";
 import { DurationInput } from "./duration-input";
+import { trpc } from "@/lib/trpc";
 
 const Page = () => {
+  const createExperiment = trpc.createExperiment.useMutation({
+    onSuccess: (data) => {
+      console.log(data);
+    },
+  });
+
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-lg">Create new experiment</h1>
 
       <form
         className="space-y-6 max-w-lg"
-        action={async (formData) => {
-          "use server";
-          console.log(formData);
+        onSubmit={(e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target as HTMLFormElement);
+          const data = Object.fromEntries(formData.entries());
+
+          const name = data["experiment-name"] as string;
+          const description =
+            (data["experiment-description"] as string) || undefined;
+          const startedAt = new Date(data["experiment-startedAt"] as string);
+          const endedAt = new Date(data["experiment-endedAt"] as string);
+          const sampleSizeAbsolute =
+            parseInt(data["experiment-sampleSizeAbsolute"] as string) ||
+            undefined;
+          const sampleSizeRelative =
+            parseFloat(data["experiment-sampleSizeRelative"] as string) / 100 ||
+            undefined;
+
+          createExperiment.mutate({
+            name,
+            description,
+            startedAt,
+            endedAt,
+            sampleSizeAbsolute,
+            sampleSizeRelative,
+          });
         }}
       >
         <div className="space-y-2">
@@ -52,7 +82,9 @@ const Page = () => {
         <DurationInput />
         <SampleSizeInput />
         <div className="flex justify-end">
-          <Button type="submit">Create experiment</Button>
+          <Button type="submit" disabled={createExperiment.isPending}>
+            Create experiment
+          </Button>
         </div>
       </form>
     </div>

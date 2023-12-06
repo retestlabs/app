@@ -1,0 +1,18 @@
+{
+  "id": "mig_cln4kqorqcljm4d1lkng",
+  "parentID": "mig_cln4kkb93cu4enldk3ug",
+  "checksum": "1:712f5490b433c16b9d2a5240acf4f64cc4d212b44fb34688b8cc7da6989a6fe5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "region"
+      }
+    }
+  ]
+}

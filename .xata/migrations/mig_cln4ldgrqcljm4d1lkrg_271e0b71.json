@@ -1,0 +1,19 @@
+{
+  "id": "mig_cln4ldgrqcljm4d1lkrg",
+  "parentID": "mig_cln4lab93cu4enldk430",
+  "checksum": "1:271e0b710ca3cb471605d94558041c85e1b32dabb02123344a190af83d356047",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "region",
+          "type": "link",
+          "link": {
+            "table": "regions"
+          }
+        },
+        "table": "cities"
+      }
+    }
+  ]
+}

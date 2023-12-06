@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnkfuamg89bhu3d0hng",
+  "parentID": "mig_clnkfqorqcljm4d1njug",
+  "checksum": "1:0916da154dfca072775f4e4d09dfb3be05ef06c577df5ef77fce117e4bea7a3c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experiment",
+          "type": "link",
+          "link": {
+            "table": "experiments"
+          }
+        },
+        "table": "experiment_region_relations"
+      }
+    }
+  ]
+}

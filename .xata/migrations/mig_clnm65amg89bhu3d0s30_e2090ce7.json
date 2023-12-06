@@ -1,0 +1,18 @@
+{
+  "id": "mig_clnm65amg89bhu3d0s30",
+  "parentID": "mig_clnm0fqmg89bhu3d0ro0",
+  "checksum": "1:e2090ce7a7acef417817f515899537644f8459b6426c3d55ce586ad3935d33ec",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "browsers"
+      }
+    }
+  ]
+}

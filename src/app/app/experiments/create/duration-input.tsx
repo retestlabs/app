@@ -1,7 +1,5 @@
 "use client";
 
-import { format } from "date-fns";
-
 import * as React from "react";
 import { Label } from "@/components/ui/label";
 import { InputHint } from "@/components/input-hint";
@@ -9,8 +7,12 @@ import { InputHint } from "@/components/input-hint";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 
 export const DurationInput = () => {
-  let [startedAt, setStartedAt] = React.useState<Date | undefined>();
-  let [endedAt, setEndedAt] = React.useState<Date | undefined>();
+  let [startedAt, setStartedAt] = React.useState<Date | undefined>(new Date());
+  let [endedAt, setEndedAt] = React.useState<Date | undefined>(() => {
+    let date = new Date();
+    date.setDate(date.getDate() + 14);
+    return date;
+  });
 
   return (
     <div className="space-y-2">
@@ -52,8 +54,22 @@ export const DurationInput = () => {
           : "Choose a start and end date"}
       </p>
       <div className="hidden">
-        <input value={startedAt?.toISOString()} name="experiment-startedAt" />
-        <input value={endedAt?.toISOString()} name="experiment-endedAt" />
+        <input
+          type="text"
+          value={startedAt?.toISOString() || ""}
+          onChange={(e) => {
+            setStartedAt(new Date(e.target.value));
+          }}
+          name="experiment-startedAt"
+        />
+        <input
+          type="text"
+          value={endedAt?.toISOString() || ""}
+          onChange={(e) => {
+            setEndedAt(new Date(e.target.value));
+          }}
+          name="experiment-endedAt"
+        />
       </div>
     </div>
   );

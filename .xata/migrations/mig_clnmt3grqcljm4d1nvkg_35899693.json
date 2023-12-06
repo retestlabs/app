@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnmt3grqcljm4d1nvkg",
+  "parentID": "mig_clnmt18rqcljm4d1nvjg",
+  "checksum": "1:358996930bcf41c746bd54e21cc2c817c206b143c8304e2fb0cee1a34206a277",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "operatingSystem",
+        "table": "subjects"
+      }
+    }
+  ]
+}

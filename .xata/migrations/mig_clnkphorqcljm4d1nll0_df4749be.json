@@ -1,0 +1,17 @@
+{
+  "id": "mig_clnkphorqcljm4d1nll0",
+  "parentID": "mig_clnkpggrqcljm4d1nlk0",
+  "checksum": "1:df4749be94cefeb8f7f4de1fb7b69b18b04c6413a1dfa7d2e5a296ba393f3765",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "time_zones"
+      }
+    }
+  ]
+}

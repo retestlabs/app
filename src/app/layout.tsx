@@ -3,7 +3,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "./theme-provider";
+import { ThemeProvider } from "./providers/theme-provider";
+import { TRPCReactQueryProvider } from "./providers/trpc-react-query-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Retest",
-  description: "A/B testing platform for product teams",
+  description: "The A/B testing platform for quick product teams",
 };
 
 export default function RootLayout({
@@ -28,14 +29,16 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <TRPCReactQueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </TRPCReactQueryProvider>
       </body>
     </html>
   );

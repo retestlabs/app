@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnn3f0rqcljm4d1o0r0",
+  "parentID": "mig_clnn2pj93cu4enldm0o0",
+  "checksum": "1:e8bac7983a641385b401474eeb5b48fdfd59615331ef40973a33dd504e0330ac",
+  "operations": [
+    {
+      "addTable": {
+        "table": "subject_variant_relations"
+      }
+    }
+  ]
+}

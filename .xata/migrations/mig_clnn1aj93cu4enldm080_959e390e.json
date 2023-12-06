@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnn1aj93cu4enldm080",
+  "parentID": "mig_clnn18img89bhu3d1370",
+  "checksum": "1:959e390ea75157ae9aa372f774900430b7ea581fac2396fe80fe14cff70872f0",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "regions"
+      }
+    }
+  ]
+}

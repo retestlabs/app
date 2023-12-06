@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnn2jj93cu4enldm0n0",
+  "parentID": "mig_clnn2iorqcljm4d1o0pg",
+  "checksum": "1:714af9ae46c2685cfb23228a88f3d17c52d2b2bedcfae846d1bf050c3c5c52c1",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "longitude",
+        "table": "subjects"
+      }
+    }
+  ]
+}

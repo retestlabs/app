@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnn2pj93cu4enldm0o0",
+  "parentID": "mig_clnn2jj93cu4enldm0n0",
+  "checksum": "1:661807ae5c9e892f351e84cf05f0f176c8cd4064e34fd1c53e7cdd3c20283014",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "country",
+          "type": "link",
+          "link": {
+            "table": "countries"
+          }
+        },
+        "table": "subjects"
+      }
+    }
+  ]
+}

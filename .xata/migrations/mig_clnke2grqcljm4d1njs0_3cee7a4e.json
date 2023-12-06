@@ -1,0 +1,16 @@
+{
+  "id": "mig_clnke2grqcljm4d1njs0",
+  "parentID": "mig_clnke00rqcljm4d1njr0",
+  "checksum": "1:3cee7a4eb8593bc33d38b10d7d54ddf00748fc96d13183a6c5af9faa24280b0e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "longitude",
+          "type": "float"
+        },
+        "table": "subjects"
+      }
+    }
+  ]
+}

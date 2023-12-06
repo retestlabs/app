@@ -1,0 +1,13 @@
+{
+  "id": "mig_clnkq4grqcljm4d1nlq0",
+  "parentID": "mig_clnkq2qmg89bhu3d0j70",
+  "checksum": "1:32ce9d12fd8bc212c7bdc58e0dcd9035ec62412db4a22de1f95a0410c74b94c8",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "sampleSizeRelative",
+        "table": "experiments"
+      }
+    }
+  ]
+}

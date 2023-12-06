@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnkfj0rqcljm4d1njtg",
+  "parentID": "mig_clnkfh2mg89bhu3d0hlg",
+  "checksum": "1:d063a8cd5422d6e91ef6253707486af640641bc296f9576b63c892c8bfdc063f",
+  "operations": [
+    {
+      "addTable": {
+        "table": "experiment_country_relations"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mig_clnkqt0rqcljm4d1nlt0",
+  "parentID": "mig_clnkqrqmg89bhu3d0j80",
+  "checksum": "1:e63611aed8e44b80d1cb9d375beabac6f30564ef7f06386debd80a5cbe8a3fe3",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "timezone",
+        "oldName": "timeZone",
+        "table": "subjects"
+      }
+    }
+  ]
+}

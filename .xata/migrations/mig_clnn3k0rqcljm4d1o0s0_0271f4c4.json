@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnn3k0rqcljm4d1o0s0",
+  "parentID": "mig_clnn3hj93cu4enldm0p0",
+  "checksum": "1:0271f4c4ca38c2a60401b94aecca0876219d29c2b4f12a2af68f2abeeb950548",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "variant",
+          "type": "link",
+          "link": {
+            "table": "variants"
+          }
+        },
+        "table": "subject_variant_relations"
+      }
+    }
+  ]
+}

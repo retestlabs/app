@@ -1,0 +1,18 @@
+{
+  "id": "mig_cln3rvr93cu4enldjs50",
+  "parentID": "mig_cln3rl8rqcljm4d1ljj0",
+  "checksum": "1:d21624db023f19ada6933de31d3701705ac3e8437e2e2860a7fca9aee479c700",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Default name"
+        },
+        "table": "experiments"
+      }
+    }
+  ]
+}

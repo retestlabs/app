@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnn12qmg89bhu3d1340",
+  "parentID": "mig_clnn0nimg89bhu3d12p0",
+  "checksum": "1:e62e959abb749a7e35244f8f4347159df36c20349d83d3ceeef843231e903c7d",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "experiment_city_relations"
+      }
+    }
+  ]
+}

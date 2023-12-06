@@ -1,0 +1,12 @@
+{
+  "id": "mig_clnkfh2mg89bhu3d0hlg",
+  "parentID": "mig_clnke2grqcljm4d1njs0",
+  "checksum": "1:4dd17d3c7708c45a819fcc5e1e48808725d4322937cd0e8da7a5b92f02ec2b14",
+  "operations": [
+    {
+      "addTable": {
+        "table": "experiment_region_relations"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "mig_cln3rl8rqcljm4d1ljj0",
+  "parentID": "mig_cln3rjb93cu4enldjs40",
+  "checksum": "1:c8619ec40ef3bbfc4092e78e5b46a259f4adddfc025239219cea37526bc168ee",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experiment",
+          "type": "link",
+          "link": {
+            "table": "experiments"
+          }
+        },
+        "table": "variants"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "mig_cln4obj93cu4enldk46g",
+  "parentID": "mig_cln4o1b93cu4enldk45g",
+  "checksum": "1:7b9f8e3a763808b90bdccba61cea57aeb015cb8c78b98ceda74c8124b3cf2abf",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experiment",
+          "type": "link",
+          "link": {
+            "table": "experiments"
+          }
+        },
+        "table": "experiment_city_relations"
+      }
+    }
+  ]
+}

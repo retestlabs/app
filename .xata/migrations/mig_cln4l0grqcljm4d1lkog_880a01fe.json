@@ -1,0 +1,13 @@
+{
+  "id": "mig_cln4l0grqcljm4d1lkog",
+  "parentID": "mig_cln4kvr93cu4enldk40g",
+  "checksum": "1:880a01fe756e49c11ed6534bc121abe9d1fc1d4bc657bd0d95be24161d04b015",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "subjects",
+        "oldName": "subject"
+      }
+    }
+  ]
+}

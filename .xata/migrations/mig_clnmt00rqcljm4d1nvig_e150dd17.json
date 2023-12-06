@@ -1,0 +1,19 @@
+{
+  "id": "mig_clnmt00rqcljm4d1nvig",
+  "parentID": "mig_clnmsq2mg89bhu3d12g0",
+  "checksum": "1:e150dd1727404c558f367dcda6a65466b9e6051364371b0fcc43235de331fcc9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "browser",
+          "type": "link",
+          "link": {
+            "table": "browsers"
+          }
+        },
+        "table": "devices"
+      }
+    }
+  ]
+}
