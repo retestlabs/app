@@ -41,8 +41,8 @@ const Page = () => {
           <div className="flex items-center justify-between">
             <Label htmlFor="experiment-description">Description</Label>
             <InputHint>
-              Optional: Describe what you're testing and why. This will help you
-              and your team understand the experiment later.
+              Optional: Describe what you are testing and why. This will help
+              you and your team understand the experiment later.
             </InputHint>
           </div>
           <Textarea
