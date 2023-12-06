@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export const SampleSizeInput = () => {
   let [typeOfSampleSize, setTypeOfSampleSize] = React.useState("relative");
-  let [relativeSize, setRelativeSize] = React.useState(0.25);
+  let [relativeSize, setRelativeSize] = React.useState([0.25]);
   let [absoluteSize, setAbsoluteSize] = React.useState(1000);
 
   return (
@@ -33,11 +33,15 @@ export const SampleSizeInput = () => {
       <RadioGroup value={typeOfSampleSize} onValueChange={setTypeOfSampleSize}>
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="relative" id="relative" />
-          <Label htmlFor="relative">Relative</Label>
+          <Label htmlFor="relative" className="text-xs">
+            Relative
+          </Label>
         </div>
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="absolute" id="absolute" />
-          <Label htmlFor="absolute">Absolute</Label>
+          <Label htmlFor="absolute" className="text-xs">
+            Absolute
+          </Label>
         </div>
       </RadioGroup>
 
@@ -46,7 +50,7 @@ export const SampleSizeInput = () => {
           <Slider
             id="experiment-sample-relative-size"
             name="experiment-sample-relative-size"
-            value={[relativeSize]}
+            value={relativeSize}
             onValueChange={setRelativeSize}
             min={0}
             max={1}
@@ -55,8 +59,8 @@ export const SampleSizeInput = () => {
           <Input
             id="experiment-sample-relative-size-input"
             className="w-20"
-            value={(relativeSize * 100).toFixed(1)}
-            onChange={(e) => setRelativeSize(Number(e.target.value) / 100)}
+            value={(relativeSize[0] * 100).toFixed(1)}
+            onChange={(e) => setRelativeSize([Number(e.target.value) / 100])}
             type="number"
             min={0}
             max={100}
@@ -79,7 +83,7 @@ export const SampleSizeInput = () => {
       <p className="text-xs text-muted-foreground">
         Sample size{": "}
         {typeOfSampleSize === "relative"
-          ? `${(relativeSize * 100).toFixed(1)}% of users`
+          ? `${(relativeSize[0] * 100).toFixed(1)}% of users`
           : `${absoluteSize} users`}
       </p>
     </div>

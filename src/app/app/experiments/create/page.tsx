@@ -15,7 +15,7 @@ const Page = () => {
       <h1 className="font-bold text-lg">Create new experiment</h1>
 
       <form
-        className="space-y-4 max-w-lg"
+        className="space-y-6 max-w-lg"
         action={async (formData) => {
           "use server";
           console.log(formData);
@@ -36,7 +36,6 @@ const Page = () => {
             required
           ></Input>
         </div>
-        <Separator />
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Label htmlFor="experiment-description">Description</Label>
@@ -50,11 +49,8 @@ const Page = () => {
             name="experiment-description"
           ></Textarea>
         </div>
-        <Separator />
         <DurationInput />
-        <Separator />
         <SampleSizeInput />
-        <Separator />
         <div className="flex justify-end">
           <Button type="submit">Create experiment</Button>
         </div>
