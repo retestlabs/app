@@ -11,14 +11,22 @@ import { SampleSizeInput } from "./sample-size-input";
 import { DurationInput } from "./duration-input";
 import { trpc } from "@/lib/trpc";
 
+import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast";
+import Link from "next/link";
+
 const Page = () => {
+  let router = useRouter();
+  const { toast } = useToast();
   const createExperiment = trpc.createExperiment.useMutation({
     onSuccess: (data) => {
-      console.log(data);
+      toast({
+        title: "Experiment created",
+        description: "ID: " + data.id,
+      });
+      router.push(`/app/experiments`);
     },
   });
-
-  console.log(createExperiment.isLoading);
 
   return (
     <div className="space-y-4">
@@ -83,7 +91,10 @@ const Page = () => {
         </div>
         <DurationInput />
         <SampleSizeInput />
-        <div className="flex justify-end">
+        <div className="flex justify-between">
+          <Button type="button" variant="outline">
+            <Link href="/app/experiments">Cancel</Link>
+          </Button>
           <Button type="submit" disabled={createExperiment.isLoading}>
             Create experiment
           </Button>

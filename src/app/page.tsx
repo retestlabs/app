@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -6,7 +7,9 @@ export default function Home() {
       <h1 className="font-bold text-3xl">
         The A/B testing platform for quick product teams
       </h1>
-      <Button>Get Started</Button>
+      <Button asChild>
+        <Link href="/app">Get Started</Link>
+      </Button>
     </main>
   );
 }
