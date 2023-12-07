@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getXataClient } from "@/lib/xata";
 import { formatDistance } from "date-fns";
 

@@ -32,7 +32,7 @@ export const PastExperiments = async () => {
           <div className="grid grid-cols-3 gap-4">
             {experiments.map((experiment) => (
               <div
-                className="p-4 rounded-lg border border-secondary/90 bg-secondary/20"
+                className="p-4 rounded-lg border border-green-800/50 bg-green-800/10"
                 key={experiment.id}
               >
                 <p className="font-bold text-lg">{experiment.name}</p>

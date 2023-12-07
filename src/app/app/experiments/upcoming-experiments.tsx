@@ -55,7 +55,7 @@ export const UpcomingExperiments = async () => {
                 <p className="text-xs">
                   Starts{" "}
                   {experiment.startedAt
-                    ? formatDistance(new Date(), experiment.startedAt, {
+                    ? formatDistance(experiment.startedAt, new Date(), {
                         addSuffix: true,
                       })
                     : "xd"}
