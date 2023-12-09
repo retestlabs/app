@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 import { getXataClient } from "@/lib/xata";
 import { formatDistance } from "date-fns";
@@ -48,7 +48,12 @@ const Page = async () => {
             className="p-4 rounded-lg border border-primary/40 bg-primary/10"
             key={experiment.id}
           >
-            <p className="font-bold text-lg">{experiment.name}</p>
+            <Link
+              href={"/app/experiments/" + experiment.id.replace("rec_", "exp_")}
+              className="font-bold text-lg hover:underline"
+            >
+              {experiment.name}
+            </Link>
             <div className="grid grid-cols-3 text-sm py-4">
               <p className="tabular-nums">
                 {getRandomInt(experiment.sampleSizeAbsolute || 1000)} users
