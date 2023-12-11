@@ -40,4 +40,32 @@ export const appRouter = router({
       let experiment = await xata.db.experiments.create(input);
       return experiment;
     }),
+  createMetric: publicProcedure
+    .input(
+      z.object({
+        experimentId: z.string(),
+        name: z.string(),
+        type: z.enum(["conversion", "duration", "call"]),
+      })
+    )
+    .mutation(async (opts) => {
+      const { input } = opts;
+      let metric = await xata.db.metrics.create({
+        name: input.name,
+        type: input.type,
+        experiment: input.experimentId.replace("exp_", "rec_"),
+      });
+      return metric;
+    }),
+  listMetrics: publicProcedure
+    .input(z.object({ experimentId: z.string() }))
+    .query(async (opts) => {
+      const { input } = opts;
+      let metrics = await xata.db.metrics
+        .filter({
+          experiment: input.experimentId.replace("exp_", "rec_"),
+        })
+        .getAll();
+      return metrics;
+    }),
 });

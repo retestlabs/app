@@ -25,7 +25,7 @@ const tables = [
     revLinks: [
       { column: "experiment", table: "variants" },
       { column: "experiment", table: "experiment_country_relations" },
-      { column: "experiment", table: "events" },
+      { column: "experiment", table: "metrics" },
     ],
   },
   {
@@ -42,7 +42,7 @@ const tables = [
     ],
     revLinks: [
       { column: "variant", table: "subject_variant_relations" },
-      { column: "variant", table: "logs" },
+      { column: "variant", table: "events" },
     ],
   },
   {
@@ -79,7 +79,7 @@ const tables = [
     ],
   },
   {
-    name: "events",
+    name: "metrics",
     columns: [
       {
         name: "name",
@@ -88,13 +88,19 @@ const tables = [
         defaultValue: "Default name",
       },
       { name: "experiment", type: "link", link: { table: "experiments" } },
+      {
+        name: "type",
+        type: "string",
+        notNull: true,
+        defaultValue: "Default type",
+      },
     ],
-    revLinks: [{ column: "event", table: "logs" }],
+    revLinks: [{ column: "metric", table: "events" }],
   },
   {
-    name: "logs",
+    name: "events",
     columns: [
-      { name: "event", type: "link", link: { table: "events" } },
+      { name: "metric", type: "link", link: { table: "metrics" } },
       { name: "device", type: "link", link: { table: "devices" } },
       { name: "variant", type: "link", link: { table: "variants" } },
     ],
@@ -134,7 +140,7 @@ const tables = [
         link: { table: "operating_systems" },
       },
     ],
-    revLinks: [{ column: "device", table: "logs" }],
+    revLinks: [{ column: "device", table: "events" }],
   },
   {
     name: "subject_variant_relations",
@@ -165,11 +171,11 @@ export type ExperimentCountryRelations =
 export type ExperimentCountryRelationsRecord = ExperimentCountryRelations &
   XataRecord;
 
+export type Metrics = InferredTypes["metrics"];
+export type MetricsRecord = Metrics & XataRecord;
+
 export type Events = InferredTypes["events"];
 export type EventsRecord = Events & XataRecord;
-
-export type Logs = InferredTypes["logs"];
-export type LogsRecord = Logs & XataRecord;
 
 export type Browsers = InferredTypes["browsers"];
 export type BrowsersRecord = Browsers & XataRecord;
@@ -191,8 +197,8 @@ export type DatabaseSchema = {
   subjects: SubjectsRecord;
   countries: CountriesRecord;
   experiment_country_relations: ExperimentCountryRelationsRecord;
+  metrics: MetricsRecord;
   events: EventsRecord;
-  logs: LogsRecord;
   browsers: BrowsersRecord;
   operating_systems: OperatingSystemsRecord;
   devices: DevicesRecord;
