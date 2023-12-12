@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ExperimentCard } from "./experiment-card";
 
 let xata = getXataClient();
 
@@ -40,27 +41,11 @@ export const UpcomingExperiments = async () => {
         <AccordionContent>
           <div className="grid grid-cols-3 gap-4">
             {experiments.map((experiment) => (
-              <div
-                className="p-4 rounded-lg border border-secondary/90 bg-secondary/20"
+              <ExperimentCard
+                variant="upcoming"
                 key={experiment.id}
-              >
-                <p className="font-bold text-lg">{experiment.name}</p>
-                <div className="grid grid-cols-3 text-sm py-4">
-                  <p className="tabular-nums">
-                    {getRandomInt(experiment.sampleSizeAbsolute || 1000)} users
-                  </p>
-                  <p className="tabular-nums">{getRandomInt(200)} signups</p>
-                  <p className="tabular-nums">{getRandomInt(50)} purchases</p>
-                </div>
-                <p className="text-xs">
-                  Starts{" "}
-                  {experiment.startedAt
-                    ? formatDistance(experiment.startedAt, new Date(), {
-                        addSuffix: true,
-                      })
-                    : "xd"}
-                </p>
-              </div>
+                {...experiment}
+              />
             ))}
           </div>
         </AccordionContent>

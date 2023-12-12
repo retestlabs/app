@@ -8,12 +8,9 @@ import { PastExperiments } from "./past-experiments";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { UpcomingExperiments } from "./upcoming-experiments";
+import { ExperimentCard } from "./experiment-card";
 
 let xata = getXataClient();
-
-function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max);
-}
 
 const Page = async () => {
   let experiments = await xata.db.experiments
@@ -44,32 +41,11 @@ const Page = async () => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         {experiments.map((experiment) => (
-          <div
-            className="p-4 rounded-lg border border-primary/40 bg-primary/10"
+          <ExperimentCard
+            variant="active"
             key={experiment.id}
-          >
-            <Link
-              href={"/app/experiments/" + experiment.id.replace("rec_", "exp_")}
-              className="font-bold text-lg hover:underline"
-            >
-              {experiment.name}
-            </Link>
-            <div className="grid grid-cols-3 text-sm py-4">
-              <p className="tabular-nums">
-                {getRandomInt(experiment.sampleSizeAbsolute || 1000)} users
-              </p>
-              <p className="tabular-nums">{getRandomInt(200)} signups</p>
-              <p className="tabular-nums">{getRandomInt(50)} purchases</p>
-            </div>
-            <p className="text-xs">
-              Ends{" "}
-              {experiment.endedAt
-                ? formatDistance(experiment.endedAt, new Date(), {
-                    addSuffix: true,
-                  })
-                : "xd"}
-            </p>
-          </div>
+            {...experiment}
+          />
         ))}
       </div>
 
