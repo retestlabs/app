@@ -68,4 +68,22 @@ export const appRouter = router({
         .getAll();
       return metrics;
     }),
+
+  renameMetric: publicProcedure
+    .input(z.object({ metricId: z.string(), name: z.string() }))
+    .mutation(async (opts) => {
+      const { input } = opts;
+      let metric = await xata.db.metrics.update(input.metricId, {
+        name: input.name,
+      });
+      return metric;
+    }),
+
+  deleteMetric: publicProcedure
+    .input(z.object({ metricId: z.string() }))
+    .mutation(async (opts) => {
+      const { input } = opts;
+      let metric = await xata.db.metrics.delete(input.metricId);
+      return metric;
+    }),
 });

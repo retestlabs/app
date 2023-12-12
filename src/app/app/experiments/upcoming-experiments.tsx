@@ -1,5 +1,4 @@
 import { getXataClient } from "@/lib/xata";
-import { formatDistance } from "date-fns";
 
 import {
   Accordion,
@@ -10,10 +9,6 @@ import {
 import { ExperimentCard } from "./experiment-card";
 
 let xata = getXataClient();
-
-function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max);
-}
 
 export const UpcomingExperiments = async () => {
   let experiments = await xata.db.experiments

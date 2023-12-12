@@ -104,7 +104,7 @@ export const AddMetric = () => {
       </Popover>
 
       <Popover open={openFormModal} onOpenChange={setOpenFormModal}>
-        <PopoverTrigger className="w-full h-px p-0 m-0 flex invisible"></PopoverTrigger>
+        <PopoverTrigger className="w-full h-0 p-0 m-0 flex invisible"></PopoverTrigger>
         <PopoverContent className="w-64 p-2" side="right">
           <form
             className="space-y-4"
